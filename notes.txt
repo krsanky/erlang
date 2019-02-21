@@ -1,0 +1,7 @@
+Eshell V8.3.5.4  (abort with ^G)
+1> c(tut).
+{ok,tut}
+2> tut:double(99).
+198
+3> halt().
+
