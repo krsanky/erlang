@@ -22,3 +22,16 @@ Eshell V8.3.5.4  (abort with ^G)
                           {shell,eval_loop,3,[{file,"shell.erl"},{line,626}]}]}}
 5> 
 
+Eshell V8.3.5.4  (abort with ^G)
+1> c(tut).
+{ok,tut}
+2> tut:convert(length({inch,3}).
+* 1: syntax error before: '.'
+2> tut:convert_length({inch,3}).
+{centimeter,7.62}
+3> itut:convert_length(tut:convert_length({inch,3})).
+** exception error: undefined function itut:convert_length/1
+4> tut:convert_length(tut:convert_length({inch,3})). 
+{inch,3.0}
+5> 
+
