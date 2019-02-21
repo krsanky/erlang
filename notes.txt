@@ -5,3 +5,20 @@ Eshell V8.3.5.4  (abort with ^G)
 198
 3> halt().
 
+Eshell V8.3.5.4  (abort with ^G)
+1> c(tut).
+{ok,tut}
+2> tut:convert(123,inch).
+48.425196850393704
+3> tut:convert(123,mile).
+** exception error: no function clause matching tut:convert(123,mile) (tut.erl, line 18)
+4> v(3).
+{'EXIT',{function_clause,[{tut,convert,
+                               [123,mile],
+                               [{file,"tut.erl"},{line,18}]},
+                          {erl_eval,do_apply,6,[{file,"erl_eval.erl"},{line,674}]},
+                          {shell,exprs,7,[{file,"shell.erl"},{line,686}]},
+                          {shell,eval_exprs,7,[{file,"shell.erl"},{line,641}]},
+                          {shell,eval_loop,3,[{file,"shell.erl"},{line,626}]}]}}
+5> 
+
